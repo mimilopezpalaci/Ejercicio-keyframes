@@ -1,39 +1,56 @@
-   body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #111;
-            overflow: hidden;
-        }
-        .cuadrado {
-            width: 50px;
-            height: 50px;
-            background-color: red;
-            position: absolute;
-            animation: movimiento 4s infinite ease-in-out;
-        }
-    
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('imagenes/8088488.jpg');
+    background-size:cover ;
+    background-attachment: fixed;
+    overflow: hidden;
+}
 
-        @keyframes movimiento {
-            0% {
-                transform: translateX(0) translateY(0) scale(1);
-                background-color: rgb(251, 25, 232);
-            }
-            25% {
-                transform: translateX(100px) translateY(50px) scale(1.2);
-                background-color: blue;
-            }
-            50% {
-                transform: translateX(200px) translateY(0) scale(1.5);
-                background-color: rgb(66, 210, 66);
-            }
-            75% {
-                transform: translateX(300px) translateY(50px) scale(1.2);
-                background-color: rgb(238, 107, 20);
-            }
-            100% {
-                transform: translateX(400px) translateY(0) scale(1);
-                background-color: red;
-            }
-        }
+.cuadrado {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(247, 0, 255);
+    position: absolute;
+    animation: movimiento 3s infinite ease-in-out;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+.cuadrado2{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 191, 0);
+    position: absolute;
+    animation: movimiento 5s infinite ease-in-out;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+
+}
+
+
+.cuadrado:hover {
+    transform: scale(2.5); 
+    box-shadow: 0 0 40px rgb(254, 254, 254); 
+}
+
+@keyframes movimiento {
+    2% {
+        transform: translateX(0) translateY(-100px) scale(1);
+        background-color: rgb(25, 221, 251);
+    }
+    55% {
+        transform: translateX(100px) translateY(50px) scale(1.2);
+        background-color: rgb(13, 97, 243);
+        animation-timing-function: ease-in; 
+    }
+    90% {
+        transform: translateX(300px) translateY(0) scale(1.2);
+        background-color: rgb(4, 12, 113);
+        animation-timing-function: linear; 
+    }
+    100% {
+        transform: translateX(0) translateY(200px) scale(1);
+        background-color: rgb(0, 0, 0);
+    }
+   
+}
